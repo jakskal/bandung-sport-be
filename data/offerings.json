@@ -19,7 +19,7 @@
     "joinMethod": ["wa"],
     "schedule": [],
     "locationNote": null,
-    "lastVerified": null
+    "lastVerified": "2026-10-22"
   },
   {
     "id": "of-fit-hub-setiabudi-bandung-membership",
@@ -41,7 +41,7 @@
     "joinMethod": ["wa"],
     "schedule": [],
     "locationNote": null,
-    "lastVerified": null
+    "lastVerified": "2026-10-22"
   },
   {
     "id": "of-mayasari-futsal-cibiru-court-rental",
@@ -63,7 +63,7 @@
     "joinMethod": ["wa"],
     "schedule": [],
     "locationNote": null,
-    "lastVerified": null
+    "lastVerified": "2026-10-22"
   },
   {
     "id": "of-gsg-rizki-futsal-court-rental",
@@ -85,7 +85,7 @@
     "joinMethod": ["wa"],
     "schedule": [],
     "locationNote": null,
-    "lastVerified": null
+    "lastVerified": "2026-10-22"
   },
   {
     "id": "of-futsal-shakti-taridi-court-rental",
@@ -107,7 +107,7 @@
     "joinMethod": ["wa"],
     "schedule": [],
     "locationNote": null,
-    "lastVerified": null
+    "lastVerified": "2026-10-22"
   },
   {
     "id": "of-oasis-siliwangi-waterpark-visit-pass",
@@ -129,7 +129,7 @@
     "joinMethod": ["wa"],
     "schedule": [],
     "locationNote": null,
-    "lastVerified": null
+    "lastVerified": "2026-10-22"
   },
   {
     "id": "of-lapangan-gasibu-jogging-track-free-access",
@@ -151,7 +151,7 @@
     "joinMethod": [],
     "schedule": [],
     "locationNote": null,
-    "lastVerified": null
+    "lastVerified": "2026-10-22"
   },
   {
     "id": "of-jogging-track-saparua-park-gor-saparua-free-access",
@@ -173,6 +173,6 @@
     "joinMethod": [],
     "schedule": [],
     "locationNote": null,
-    "lastVerified": null
+    "lastVerified": "2026-10-22"
   }
 ]
