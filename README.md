@@ -44,6 +44,27 @@ ALLOWED_ORIGINS=http://localhost:5173 make run
 curl localhost:8080/api/venues
 ```
 
+## Deploy
+
+Production: **https://bandung-sport-be.vercel.app** (Vercel Go preset,
+`vercel.json` sets `"framework": "go"`). Hobby plan, no database: the JSON in
+`data/` is embedded at build time, so updating data means commit + push.
+
+| Setting | Value |
+|---|---|
+| Framework Preset | Go (from `vercel.json`) |
+| Root Directory | `./` |
+| Environment | `ALLOWED_ORIGINS=http://localhost:5173,https://bandung-sport-web.vercel.app` |
+| Region | Singapore (`sin1`) — default is `iad1`, ~200 ms extra from Bandung |
+
+```sh
+curl https://bandung-sport-be.vercel.app/healthz
+# {"offerings":8,"status":"ok","venues":22}
+```
+
+Adding a new frontend origin (preview deployments) means editing
+`ALLOWED_ORIGINS` and redeploying: env changes only apply to new deployments.
+
 ## Test
 
 ```sh
