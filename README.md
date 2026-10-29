@@ -54,7 +54,7 @@ Production: **https://bandung-sport-be.vercel.app** (Vercel Go preset,
 |---|---|
 | Framework Preset | Go (from `vercel.json`) |
 | Root Directory | `./` |
-| Environment | `ALLOWED_ORIGINS=http://localhost:5173,https://bandung-sport-web.vercel.app` |
+| Environment | `ALLOWED_ORIGINS=https://bandung-sport-web.vercel.app` (add preview origins as needed) |
 | Region | Singapore (`sin1`) — default is `iad1`, ~200 ms extra from Bandung |
 
 Only the origins that actually call this deployment belong here: local
