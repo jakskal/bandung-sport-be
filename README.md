@@ -57,6 +57,12 @@ Production: **https://bandung-sport-be.vercel.app** (Vercel Go preset,
 | Environment | `ALLOWED_ORIGINS=http://localhost:5173,https://bandung-sport-web.vercel.app` |
 | Region | Singapore (`sin1`) — default is `iad1`, ~200 ms extra from Bandung |
 
+Only the origins that actually call this deployment belong here: local
+`http://localhost:5173` talks to the local Be (`make run`), so production
+lists the frontend origin only. Preview deployments get their own
+`https://<hash>.vercel.app` origin — add it explicitly when needed, CORS has
+no wildcard for subdomains.
+
 ```sh
 curl https://bandung-sport-be.vercel.app/healthz
 # {"offerings":8,"status":"ok","venues":22}
