@@ -113,5 +113,6 @@ func (c *Catalog) PriceFrom(venue Venue) *Price {
 		PriceMax:        cheapest.PriceMax,
 		PriceUnit:       *cheapest.PriceUnit,
 		PriceVisibility: cheapest.PriceVisibility,
+		SessionsPerPack: cheapest.SessionsPerPack,
 	}
 }

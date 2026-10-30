@@ -570,5 +570,27 @@
     "schedule": [],
     "locationNote": null,
     "lastVerified": null
+  },
+  {
+    "id": "of-urban-gym-personal-training",
+    "venueId": "v-urban-gym",
+    "organizerId": null,
+    "sport": "fitness",
+    "offeringType": "personal-training",
+    "title": "Paket personal trainer 12 sesi",
+    "audience": ["umum"],
+    "ageMin": null,
+    "ageMax": null,
+    "priceVisibility": "public",
+    "priceMin": 700000,
+    "priceMax": null,
+    "priceUnit": "per-session-pack",
+    "sessionsPerPack": 12,
+    "groupSize": null,
+    "durationMin": null,
+    "joinMethod": ["wa"],
+    "schedule": [],
+    "locationNote": null,
+    "lastVerified": null
   }
 ]

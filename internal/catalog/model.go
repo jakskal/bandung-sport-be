@@ -77,4 +77,7 @@ type Price struct {
 	PriceMax        *int   `json:"priceMax"`
 	PriceUnit       string `json:"priceUnit"`
 	PriceVisibility string `json:"priceVisibility"`
+	// SessionsPerPack is only set for per-session-pack prices; the card needs
+	// it to say "Rp700rb /12 sesi" instead of a misleading "/sesi".
+	SessionsPerPack *int `json:"sessionsPerPack"`
 }

@@ -200,6 +200,13 @@ func TestPriceFrom(t *testing.T) {
 			offerings: []Offering{offeringFor("v-b", "fitness", "monthly", 100000)},
 			want:      nil,
 		},
+		{
+			name: "carries sessionsPerPack for pack prices",
+			offerings: []Offering{offeringFor("v-a", "fitness", "per-session-pack", 700000, func(o *Offering) {
+				o.SessionsPerPack = intPtr(12)
+			})},
+			want: &Price{PriceMin: 700000, PriceUnit: "per-session-pack", PriceVisibility: VisibilityPublic, SessionsPerPack: intPtr(12)},
+		},
 	}
 
 	for _, tc := range tests {
