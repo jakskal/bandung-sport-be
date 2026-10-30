@@ -138,6 +138,32 @@ func TestTier(t *testing.T) {
 			offerings: []Offering{offeringFor("v-b", "fitness", "monthly", 100000)},
 			want:      nil,
 		},
+		{
+			name:      "per-visit fitness uses the visit band",
+			venue:     fitnessVenue,
+			offerings: []Offering{offeringFor("v-a", "fitness", "per-visit", 20000)},
+			want:      tierPtr(TierMurah),
+		},
+		{
+			name:      "per-visit fitness above the visit band is sedang",
+			venue:     fitnessVenue,
+			offerings: []Offering{offeringFor("v-a", "fitness", "per-visit", 40000)},
+			want:      tierPtr(TierSedang),
+		},
+		{
+			name:      "cheapest offering picks the band of its own unit",
+			venue:     fitnessVenue,
+			offerings: []Offering{offeringFor("v-a", "fitness", "monthly", 300000), offeringFor("v-a", "fitness", "per-visit", 25000)},
+			want:      tierPtr(TierMurah),
+		},
+		{
+			name:  "per-session-pack has no band yet",
+			venue: fitnessVenue,
+			offerings: []Offering{offeringFor("v-a", "fitness", "per-session-pack", 700000, func(o *Offering) {
+				o.SessionsPerPack = intPtr(12)
+			})},
+			want: nil,
+		},
 	}
 
 	for _, tc := range tests {
